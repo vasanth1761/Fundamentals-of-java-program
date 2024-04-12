@@ -7,11 +7,29 @@ public class StudentDetails {
 		Scanner p = new Scanner(System.in);
 		System.out.print("Enter the no of class held");
 		int held=p.nextInt();
+		while(true)
+		if(held>0)
+		{ 
+			break;
+		}
+		else {
+			System.out.println("Enter the valid data");
+			held=p.nextInt();
+		}
 		System.out.print("Enter the no of class attended");
 		int attended=p.nextInt();
-		double percentage=p.nextDouble();
+		while(true)
+			if(attended>0)
+			{ 
+				break;
+			}
+			else {
+				System.out.println("Enter the valid data");
+				attended=p.nextInt();
+			}
+		double percentage;
 		percentage=(held/attended)*100;
-		System.out.print(percentage);
+		System.out.println("The total percentage:"+percentage);
 		if(percentage>=75)
 		{
 			System.out.println("YOu are eligible to write an exam");
